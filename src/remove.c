@@ -288,12 +288,12 @@ prompt (FTS const *fts, FTSENT const *ent, bool is_dir,
                        problems, it may be more convenient to translate these
                        strings instead as: "%1$s: %3$s is write-protected and
                        is of type '%2$s' -- remove it? ".  */
-                    ? _("%s: remove write-protected %s %s? ")
-                    : _("%s: remove %s %s? ")),
+                    ? _("%s: does write-protected %s %s spark joy? ")
+                    : _("%s: does %s %s spark joy? ")),
                    program_name, file_type (sbuf), quoted_name);
         }
 
-      if (!yesno ())
+      if (yesno ())
         return RM_USER_DECLINED;
     }
   return RM_OK;
