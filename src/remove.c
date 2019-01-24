@@ -289,7 +289,7 @@ prompt (FTS const *fts, FTSENT const *ent, bool is_dir,
                        strings instead as: "%1$s: %3$s is write-protected and
                        is of type '%2$s' -- remove it? ".  */
                     ? _("%s: remove write-protected %s %s? ")
-                    : _("%s: remove %s %s? ")),
+                    : _("%s: does %s %s give you joy? ")),
                    program_name, file_type (sbuf), quoted_name);
         }
 
